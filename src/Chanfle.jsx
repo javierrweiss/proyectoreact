@@ -1,19 +1,22 @@
-const x = (a, b) => {
-    return a + b;
-}
+import PropTypes from 'prop-types'
 
-const y = (a, b) => {
-    return () => {
-        return a*a + b*b;
-    }
-}
-
-const z = y(2,4)
-
-const Bar = () => {
+const Bar = ({ nombre, apellido, edad }) => {
     return ( <>
-    <h1>Aquí estamos {z()}</h1>
+    <h1>Saludos, {nombre} {apellido}!!!</h1>
+    <p>Tu edad es: {edad}</p>
     </> );
 }
- 
-export default Bar;
+
+Bar.PropTypes = {
+    nombre: PropTypes.string.isRequired,
+    apellido: PropTypes.string.isRequired,
+    edad: PropTypes.number.isRequired,
+}
+
+// En caso que no se le pase nada
+Bar.defaultProps = {
+    nombre: 'Marino',
+    apellido: 'Mercedes',
+    edad: 25
+}    
+export default Bar; 
