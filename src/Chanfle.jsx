@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 
 const Bar = ({ nombre, apellido, edad }) => {
     return ( <>
@@ -6,7 +6,7 @@ const Bar = ({ nombre, apellido, edad }) => {
     <p>Tu edad es: {edad}</p>
     </> );
 }
-
+/*
 Bar.PropTypes = {
     nombre: PropTypes.string.isRequired,
     apellido: PropTypes.string.isRequired,
@@ -14,9 +14,11 @@ Bar.PropTypes = {
 }
 
 // En caso que no se le pase nada
+
 Bar.defaultProps = {
     nombre: 'Marino',
     apellido: 'Mercedes',
     edad: 25
-}    
+} 
+*/   
 export default Bar; 
