@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-var obtenerPokemones = async () => {
+const obtenerPokemones = async () => {
     try {
         const peticion = await fetch('https://pokeapi.co/api/v2/pokemon?offset=100&limit=100')
         const resultados = await peticion.json()
@@ -10,7 +10,6 @@ var obtenerPokemones = async () => {
     }
 }
 
-
 function Item({ pokemon }){
     return (
         <li>
@@ -18,7 +17,6 @@ function Item({ pokemon }){
         </li>
     )
 }
-
 
 function Error(){
     return (
@@ -29,27 +27,20 @@ function Error(){
 function Pokemones() {
     const [pokemones, setPokemones] = useState([]);
     const [error, setError] = useState(null);
-    useEffect( () =>
+    useEffect( () => {
         obtenerPokemones()
-          .then(pokemones => {
-            console.log(pokemones)
-            setPokemones(pokemones)
-        })
-          .catch(error => {
-            console.log('Error' + error)
-            setError(error)
-        }), []);
+          .then(pokemones => setPokemones(pokemones))
+          .catch(error => setError(error))}, [pokemones, error]);
     if(error) return <Error/>    
-    
+    const items = pokemones.map(pokemon => 
+         <Item key={pokemon.url} pokemon={pokemon.name}/>
+        );
     return (
       <>
         <h2>Pokemones</h2>
         <ol>
         {
-         pokemones.map(pokemon => (
-        // <Item key={pokemon.url} pokemon={pokemon.name}></Item>
-        <li key={pokemon.url}>{pokemon.name}</li>
-        ))
+         items
         }
         </ol>
       </>

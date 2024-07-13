@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Bar from './Chanfle'
-import Defecto from './Defecto'
-import { Contador } from './Contador'
-import Pokemones  from './Pokemones'
+import Bar from './componentes/varios/Chanfle'
+import Defecto from './componentes/varios/Defecto'
+import { Contador } from './componentes/varios/Contador'
+import Pokemones  from './componentes/varios/Pokemones'
+import Formulario from './componentes/formularios/Formulario'
 import './style.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,5 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Defecto  />
     <Contador />
     <Pokemones />
+    <Formulario />
   </React.StrictMode>,
 )
