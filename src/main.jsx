@@ -5,6 +5,7 @@ import Defecto from './componentes/varios/Defecto'
 import { Contador } from './componentes/varios/Contador'
 import Pokemones  from './componentes/varios/Pokemones'
 import Formulario from './componentes/formularios/Formulario'
+import { AppUser } from './componentes/varios/AppUser'
 import './style.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -14,5 +15,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Contador />
     <Pokemones />
     <Formulario />
+    <AppUser />
   </React.StrictMode>,
 )
