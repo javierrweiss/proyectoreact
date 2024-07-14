@@ -10,7 +10,7 @@ import './style.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Bar nombre="Julian" apellido="Margarita" edad={ 59 }/>
+    <Bar nombre="Juliana" apellido="Margarita" edad={ 79 }/>
     <Defecto  />
     <Contador />
     <Pokemones />
