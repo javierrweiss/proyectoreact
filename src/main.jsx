@@ -9,6 +9,8 @@ import { AppUser } from './componentes/varios/AppUser'
 import './style.css'
 import { HooksApp } from './componentes/varios/HooksApp'
 import { FormularioComponent }   from './componentes/formularios/FormularioComponent'
+import UsuariosComponent from './componentes/varios/UsuariosComponent'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,5 +22,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AppUser />
     <HooksApp>  </HooksApp>
     <FormularioComponent />
+    <UsuariosComponent></UsuariosComponent>
   </React.StrictMode>,
 )

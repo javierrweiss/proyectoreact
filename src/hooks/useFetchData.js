@@ -4,7 +4,7 @@ export const useFetchData = ({ endpoint }) => {
     const [data, setData] = useState([]);
     const [isLoading, setisLoading] = useState(true);
     useEffect(() => {
-        async () => {
+        (async () => {
             try {
                 const response = await fetch(`https://jsonplaceholder.typicode.com/${endpoint}`);
                 const datos = await response.json();
@@ -13,7 +13,7 @@ export const useFetchData = ({ endpoint }) => {
             } catch (error) {
                 console.error('Hubo un problema: ' + error);
             }
-        }
+        }).then(() => console.log('ejecutando'))
     }, [ endpoint]);
 
     return {data, 
