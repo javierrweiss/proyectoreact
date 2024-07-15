@@ -7,6 +7,8 @@ import Pokemones  from './componentes/varios/Pokemones'
 import Formulario from './componentes/formularios/Formulario'
 import { AppUser } from './componentes/varios/AppUser'
 import './style.css'
+import { HooksApp } from './componentes/varios/HooksApp'
+import { FormularioComponent }   from './componentes/formularios/FormularioComponent'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,5 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Pokemones />
     <Formulario />
     <AppUser />
+    <HooksApp>  </HooksApp>
+    <FormularioComponent />
   </React.StrictMode>,
 )

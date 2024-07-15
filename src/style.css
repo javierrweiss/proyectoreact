@@ -3,3 +3,7 @@ body{
     color: blueviolet;
     background-color: aqua;
 }
+
+button{
+    margin: 0.25rem;
+}
