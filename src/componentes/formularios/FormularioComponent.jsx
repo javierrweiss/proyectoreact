@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export const FormularioComponent = () => {
     const [formulario, setFormulario] = useState({
@@ -10,6 +10,12 @@ export const FormularioComponent = () => {
         e.preventDefault();
         console.log(formulario);
     }
+    const focusRef = useRef();
+
+    useEffect(() => {
+        focusRef.current.focus();
+    }, [])
+    
     return (
         <>
             <form>
@@ -24,7 +30,8 @@ export const FormularioComponent = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" 
+                    <input type="email"
+                           ref = {focusRef} 
                            className="form-control" 
                            id="exampleInputEmail1" 
                            name="email"
