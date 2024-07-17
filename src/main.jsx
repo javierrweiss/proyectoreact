@@ -10,10 +10,11 @@ import './style.css'
 import { HooksApp } from './componentes/varios/HooksApp'
 import { FormularioComponent }   from './componentes/formularios/FormularioComponent'
 import UsuariosComponent from './componentes/varios/UsuariosComponent'
-
+import Factorial from './componentes/varios/Factorial'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Factorial />
     <Bar nombre="Juliana" apellido="Margarita" edad={ 79 }/>
     <Defecto  />
     <Contador />
