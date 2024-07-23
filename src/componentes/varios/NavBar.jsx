@@ -1,13 +1,3 @@
-import Bar from './Chanfle'
-import Defecto from './Defecto'
-import { Contador } from './Contador'
-import Pokemones  from './Pokemones'
-import Formulario from '../formularios/Formulario'
-import { AppUser } from './AppUser'
-import { HooksApp } from './HooksApp'
-import { FormularioComponent }   from '../formularios/FormularioComponent'
-import UsuariosComponent from './UsuariosComponent'
-import Factorial from './Factorial'
 import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
@@ -50,6 +40,9 @@ function NavBar() {
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link active" to="/factorial">Calcula factorial</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link active" to="/imagenes">Imagenes</NavLink>
                             </li>
                         </ul>
                     </div>

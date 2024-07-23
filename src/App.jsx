@@ -10,12 +10,13 @@ import UsuariosComponent from './componentes/varios/UsuariosComponent'
 import Factorial from './componentes/varios/Factorial'
 import NavBar from './componentes/varios/NavBar'
 import { Routes, Route, Navigate } from 'react-router-dom'
+import UsuarioProvider from './componentes/contexto/UsuarioProvider'
+import Imagenes from './componentes/varios/Imagenes'
 
 function App() {
     return (  
-        <>
-            <NavBar />
-           
+        <UsuarioProvider>
+            <NavBar />       
             <Routes>
                 <Route path='/' element={<Bar nombre='Marino' apellido='Mercedes' edad='56'></Bar>}></Route>
                 <Route path='/defecto' element={<Defecto></Defecto>}></Route>
@@ -27,9 +28,10 @@ function App() {
                 <Route path='/formulariocomponent' element={<FormularioComponent></FormularioComponent>}></Route>
                 <Route path='/usuarioscomponent' element={<UsuariosComponent></UsuariosComponent>}></Route>
                 <Route path='/factorial' element={<Factorial></Factorial>}></Route>
+                <Route path='/imagenes' element={<Imagenes></Imagenes>}></Route>
                 <Route path='/*' element={ <Navigate to='/'></Navigate>}></Route>
             </Routes>
-        </>
+        </UsuarioProvider>
     );
 }
 
